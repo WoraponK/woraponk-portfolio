@@ -1,12 +1,16 @@
 const path = [
   {
-    href: '/',
-    title: 'Home',
+    href: '#about',
+    title: 'About',
   },
-  // {
-  //   href: '/demo',
-  //   title: 'Demo',
-  // },
+  {
+    href: '#skills',
+    title: 'Skills',
+  },
+  {
+    href: '#projects',
+    title: 'Projects',
+  },
 ]
 
 export default path

@@ -1,0 +1,6 @@
+export { default as WelcomeSection } from './welcome-section'
+export { default as AboutSection } from './about-section'
+export { default as SkillSection } from './skill-section'
+export { default as ProjectSection } from './project-section'
+export { default as ContactSection } from './contact-section'
+export { default as EducationSection } from './education-section'

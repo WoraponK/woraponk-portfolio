@@ -1,16 +1,31 @@
 'use client'
 
 // Lib
-import { NextPage } from 'next'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 // Include in project
-import { ContentSection } from '@/containers/home'
+import {
+  WelcomeSection,
+  AboutSection,
+  SkillSection,
+  ProjectSection,
+  ContactSection,
+  EducationSection,
+} from '@/containers/home/_'
 
-const Home: NextPage = () => {
+const Home = () => {
+  useEffect(() => {
+    document.title = 'WoraponK Portfolio'
+  }, [])
+
   return (
-    <div>
-      <ContentSection />
+    <div className="pt-20 pb-44 space-y-40 container mx-auto">
+      <WelcomeSection />
+      <AboutSection />
+      <EducationSection />
+      <SkillSection />
+      <ProjectSection />
+      <ContactSection />
     </div>
   )
 }

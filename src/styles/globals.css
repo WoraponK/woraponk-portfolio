@@ -13,7 +13,7 @@
     --popover: #ffffff;
     --popover-foreground: #020817;
 
-    --primary: #FBD46D;
+    --primary: #fbd46d;
     --primary-foreground: #07031b;
 
     --secondary: #4f8b8c;
@@ -32,7 +32,7 @@
     --input: #e2e8f0;
     --ring: #020817;
 
-    --radius: 0.5rem;
+    --radius: 0rem;
   }
 
   .dark {
@@ -77,7 +77,6 @@
 
 @layer utilities {
   h1,
-  h2,
   h3,
   h4,
   h5,
@@ -90,7 +89,7 @@
   }
 
   h2 {
-    @apply text-4xl;
+    @apply text-4xl font-bold;
   }
 
   h3 {
