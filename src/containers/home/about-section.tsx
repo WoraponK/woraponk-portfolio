@@ -21,8 +21,8 @@ const AboutSection: React.FC = () => {
           <div className="p-8 space-y-6 flex flex-col">
             <h2 className="text-background">About</h2>
             <h3 className="text-primary max-md:text-2xl max-sm:text-lg">
-              Hey, My name is Worapon Klabsri and I use "Tell" as my nickname across social medias, I&apos;m a front-end
-              Developer based from Thailand. I&apos;m always curious to learn more when it comes to new technologies and
+              Hey, My name is Worapon Klabsri and I use "Tell" as my nickname across social medias, I'm a front-end
+              Developer based from Thailand. I'm always curious to learn more when it comes to new technologies and
               creative coding.
             </h3>
             <Button variant="light" className="space-x-2 w-fit self-end" size="lg">
