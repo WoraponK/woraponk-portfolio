@@ -23,7 +23,7 @@ const WelcomeSection: React.FC = () => {
           ))}
         </h1>
         <h3 className="px-32 max-md:px-0">
-          Welcome to my portfolio! Here, you&apos;ll find a showcase of my UX/UI design and frontend development
+          Welcome to my portfolio! Here, you'll find a showcase of my UX/UI design and frontend development
           expertise, all focused on creating exceptional user experiences. Feel free to explore my work!
         </h3>
         <Link href={'#about'} onClick={(e) => handleSmoothScroll(e, '#about')}>
