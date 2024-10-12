@@ -1,5 +1,5 @@
 // Icons
-import { FaGithub, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaFacebook, FaInstagram, FaLinkedin, FaMediumM } from 'react-icons/fa'
 
 const social = [
   {
@@ -21,6 +21,11 @@ const social = [
     href: 'https://www.linkedin.com/in/woraponk/',
     logo: <FaLinkedin />,
     title: 'LinkedIn',
+  },
+  {
+    href: 'https://medium.com/@worapon.klabsri',
+    logo: <FaMediumM />,
+    title: 'Medium',
   },
 ]
 

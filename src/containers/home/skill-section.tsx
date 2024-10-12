@@ -30,16 +30,16 @@ const skills = [
     title: 'CSS',
   },
   {
+    icon: <TbBrandJavascript />,
+    title: 'JavaScript',
+  },
+  {
     icon: <TbBrandTailwind />,
     title: 'TailwindCSS',
   },
   {
     icon: <TbBrandSass />,
     title: 'SASS/SCSS',
-  },
-  {
-    icon: <TbBrandJavascript />,
-    title: 'JavaScript',
   },
   {
     icon: <TbBrandTypescript />,
@@ -73,12 +73,16 @@ const skills = [
 
 const SkillSection: React.FC = () => {
   return (
-    <div id="skills" className="flex flex-col gap-12">
-      <h2 className="text-end">This is my top list skill</h2>
-      <div className="flex justify-center flex-wrap gap-7 max-sm:gap-4">
-        {skills.map((skill, index) => (
-          <SkillCard key={index} icon={skill.icon} title={skill.title} />
-        ))}
+    <div className="bg-foreground py-16">
+      <div className="container mx-auto">
+        <div id="skills" className="flex flex-col gap-12">
+          <h2 className="text-end text-primary">This is my top list skill</h2>
+          <div className="flex justify-center flex-wrap gap-7 max-sm:gap-4">
+            {skills.map((skill, index) => (
+              <SkillCard key={index} icon={skill.icon} title={skill.title} />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   )

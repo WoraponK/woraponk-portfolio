@@ -11,7 +11,7 @@ const font = Syne({ subsets: ['latin'] })
 import { Toaster } from '@/components/ui/sonner'
 
 // Include in project
-import { Navbar } from '@/components/shared/_'
+import { Navbar, Footer } from '@/components/shared/_'
 
 export default function RootLayout({
   children,
@@ -23,6 +23,7 @@ export default function RootLayout({
       <body className={cn('min-h-screen bg-primary', font.className)} suppressHydrationWarning={true}>
         <Navbar />
         <main>{children}</main>
+        <Footer />
         <Toaster />
       </body>
     </html>

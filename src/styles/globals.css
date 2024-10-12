@@ -112,3 +112,33 @@
     @apply text-base;
   }
 }
+
+@layer components {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-primary;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-foreground;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #505050;
+  }
+}
+
+/* Swiper */
+
+.certificate-carousel {
+  .swiper-pagination-bullet {
+    @apply bg-black;
+  }
+}
