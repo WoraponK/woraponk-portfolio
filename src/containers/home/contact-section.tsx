@@ -44,7 +44,7 @@ const ContactSection: React.FC = () => {
       })
 
       toast.success('Thank you for your message!', {
-        description: `I'll check yourmessage later.`,
+        description: `I'll check your message later.`,
       })
     } catch (error) {
       console.error(error)
