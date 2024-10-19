@@ -39,7 +39,7 @@ const CertificationSection: React.FC<Props> = ({ data }) => {
           dynamicBullets: true,
         }}
         autoplay={{ delay: 4000, stopOnLastSlide: false, disableOnInteraction: false }}
-        className="certificate-carousel"
+        className="my-swiper-certificate"
         breakpoints={{
           // when window width is >= 320px (mobile)
           320: {
@@ -55,8 +55,8 @@ const CertificationSection: React.FC<Props> = ({ data }) => {
           },
         }}
       >
-        {data.map((ele, _) => (
-          <SwiperSlide key={ele.id} className="pt-2 pb-5">
+        {data.map((ele) => (
+          <SwiperSlide key={ele.id} className="pt-12 pb-5 max-md:pt-6 max-sm:pt-4">
             <CertificateCard id={ele.id} image={ele.image} title={ele.title} />
           </SwiperSlide>
         ))}

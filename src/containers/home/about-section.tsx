@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button'
 // Images
 import ProfilePNG from '@/images/portrait/profile.jpg'
 import { GoArrowDown } from 'react-icons/go'
+import Link from 'next/link'
 
 const AboutSection: React.FC = () => {
   return (
@@ -25,10 +26,12 @@ const AboutSection: React.FC = () => {
               Developer based from Thailand. I'm always curious to learn more when it comes to new technologies and
               creative coding.
             </h3>
-            <Button variant="light" className="space-x-2 w-fit self-end" size="lg">
-              <GoArrowDown />
-              <span>Resume</span>
-            </Button>
+            <Link href={'/files/resume.pdf'} target="_blank" className="space-x-2 w-fit self-end">
+              <Button variant="light" size="lg">
+                <GoArrowDown />
+                <span>Resume</span>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

@@ -4,8 +4,12 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
+// Images
+import { GiHamburgerMenu } from 'react-icons/gi'
+
 // Shadcn
 import { Button } from '@/components/ui/button'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 
 // Include in project
 import path from '@/assets/path'
@@ -39,6 +43,12 @@ const Navbar: React.FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  const handleLinkClick = (e: any, href: string) => {
+    if (href.startsWith('#')) {
+      handleSmoothScroll(e, href)
+    }
+  }
+
   return (
     <nav
       className={`sticky transition-all duration-300 backdrop-blur-md ${isShow ? 'top-0' : 'top-[-12rem]'} ${
@@ -46,7 +56,7 @@ const Navbar: React.FC = () => {
       } left-0 z-50`}
     >
       <div className="container mx-auto flex items-center justify-between py-6 relative">
-        <Link href={'/'}>
+        <Link href={'#main'} onClick={(e) => handleSmoothScroll(e, '#main')}>
           <div className="flex flex-col w-fit group">
             <h4 className="font-black">
               W<span className="max-sm:hidden">ORAPON</span>
@@ -65,7 +75,7 @@ const Navbar: React.FC = () => {
               href={ele.href}
               key={index}
               className="group flex flex-col"
-              onClick={(e) => ele.href.startsWith('#') && handleSmoothScroll(e, ele.href)}
+              onClick={(e) => handleLinkClick(e, ele.href)}
             >
               <span className="font-semibold">{ele.title}</span>
               <div
@@ -76,11 +86,33 @@ const Navbar: React.FC = () => {
             </Link>
           ))}
         </div>
-        <Link href={'#contact'} onClick={(e) => handleSmoothScroll(e, '#contact')}>
-          <Button variant="dark" size="sm" className={`${!isOnTop && 'bg-background text-foreground'}`}>
-            Contact me
-          </Button>
-        </Link>
+        <div className="flex items-center space-x-2">
+          <Link href={'#contact'} onClick={(e) => handleSmoothScroll(e, '#contact')}>
+            <Button variant="dark" size="sm" className={`${!isOnTop && 'bg-background text-foreground'}`}>
+              Contact me
+            </Button>
+          </Link>
+          <Popover>
+            <PopoverTrigger asChild>
+              <Button variant="light" size="sm" className={`${!isOnTop && 'bg-foreground text-background'} lg:hidden`}>
+                <GiHamburgerMenu />
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="space-y-4">
+              {path?.map((ele, index) => (
+                <Link
+                  href={ele.href}
+                  key={index}
+                  className="group flex flex-col"
+                  onClick={(e) => handleLinkClick(e, ele.href)}
+                >
+                  <span className="font-semibold">{ele.title}</span>
+                  <div className={`w-full h-[1px] transition-all duration-200 bg-background`} />
+                </Link>
+              ))}
+            </PopoverContent>
+          </Popover>
+        </div>
       </div>
     </nav>
   )
