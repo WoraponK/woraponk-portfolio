@@ -137,7 +137,7 @@
 
 /* Swiper */
 
-.certificate-carousel {
+.my-swiper-certificate {
   .swiper-pagination-bullet {
     @apply bg-black;
   }

@@ -1,7 +1,7 @@
 export enum EProject {
-  W = 'Work',
-  E = 'Education',
-  H = 'Hobby',
+  Work = 'WORK',
+  Education = 'EDUCATION',
+  Hobby = 'HOBBY',
 }
 
 export type TCertificate = {
@@ -17,7 +17,6 @@ export type TAward = {
 }
 
 export type TContact = {
-  id: string
   title: string
   email: string
   description: string
@@ -28,5 +27,6 @@ export type TProject = {
   image: string
   title: string
   description: string
+  position: string
   type: EProject
 }

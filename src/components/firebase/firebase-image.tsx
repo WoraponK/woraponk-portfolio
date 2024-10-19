@@ -49,7 +49,17 @@ const FirebaseImage: React.FC<FirebaseImageProps> = ({
     fetchImageUrl()
   }, [imagePath])
 
-  if (!imageUrl) return <Image src={imagePlaceholder} alt={alt} width={width} height={height} {...props} />
+  if (!imageUrl)
+    return (
+      <Image
+        src={imagePlaceholder}
+        alt={alt}
+        width={width}
+        height={height}
+        {...props}
+        className="aspect-video object-center"
+      />
+    )
 
   return <Image src={imageUrl} alt={alt} width={width} height={height} {...props} />
 }
