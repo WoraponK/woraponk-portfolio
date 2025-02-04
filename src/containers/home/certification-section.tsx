@@ -21,7 +21,7 @@ const CertificationSection: React.FC<Props> = ({ data }) => {
   return (
     <div className="space-y-8">
       <div className="container mx-auto">
-        <h2>Certificates</h2>
+        <h2>Certificates ({data.length})</h2>
       </div>
       <Swiper
         modules={[Pagination, Autoplay, EffectCoverflow]}
